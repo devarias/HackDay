@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: transparent;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+div.container {
+  border-radius: 15px;
+  background-color: white;
+  padding: 30px;
+  margin: 0 auto 0 auto;
+  width: 400px;
+  height: 400px;
+}
+
+input.box {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px  rgba(0, 174, 69, 0.31);
+  border-color: transparent;
+}
+
+h3 {
+  color: black;
+  padding: 4px 30px;
+  font-family: "star-jedi";
+  text-align: left;
+  font-size: 24px;
+  margin: 1px;
+}
+
+input[type="text" i] {
+  padding: 4px 2px;
+  background: rgba(0, 174, 69, 0.31);
+  margin-top: -5px;
+}
+input[type="password" i] {
+  -webkit-text-security: disc !important;
+  padding: 4px 2px;
+  background: rgba(0, 174, 69, 0.31);
+  margin-top: -5px;
+}
+.babyYoda {
+  margin-top: -15px;
+  width: 150px;
+}
+button {
+  background: black;
+  color: white;
+  font-family:star-jedi;
+  font-size: 12px;
+  width: 130px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+@font-face {
+  font-family: "star-jedi";
+  src: url('../Fonts/Starjedi.ttf');
+}
+

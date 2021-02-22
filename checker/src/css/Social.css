@@ -1,0 +1,36 @@
+.social-container {
+  background-color: black;
+  padding: 2px;
+  color: black;
+  border-radius: 10px;
+  margin: auto;
+}
+.social {
+  display: inline-block;
+  transition: transform 300ms;
+  margin: 30px;
+}
+.social:hover {
+  transform: translateY(-3px);
+}
+.github {
+  color: white;
+}
+.twitter {
+  color: skyblue;
+}
+.linkedin {
+  color: steelblue;
+}
+#profilePic {
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+}
+
+p {
+  font-family: "star-jedi";
+  src: url("../Fonts/Starjedi.ttf");
+  color: white;
+  font-size: 35px;
+}
