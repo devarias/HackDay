@@ -6,11 +6,11 @@ class Footer extends Component {
     return (
       <div className="footer-container">
         <div>
-          Made by valentina Jaramillo, Ricardo Arquimedes and David Arias - Colombia <br></br>
+          Made by valentina Jaramillo, Ricardo Arquimedes and David Arias -
+          Colombia <br></br>
           May the Force be with you
-          
-      </div>
-      
+        </div>
+
         <img className="footerIcon" src={footerIcon} alt="" />
       </div>
     );

@@ -11,9 +11,11 @@ class Info {
       profilePicture: "https://i.imgur.com/j2maKR4.png",
       HolbieUrl: "https://intranet.hbtn.io",
       auth_token: "",
+      projectName: "",
       project: "",
       tasks: "",
       checks: "",
+      proxy: "https://thingproxy.freeboard.io/fetch/",
     });
   }
 }

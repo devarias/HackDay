@@ -20,6 +20,7 @@ function Selection(props) {
       )
       .then((response) => {
         if (response.status === 200) {
+          Info.projectName = response.data.name;
           Info.tasks = JSON.stringify(response.data.tasks);
           props.history.push("/checker");
         }

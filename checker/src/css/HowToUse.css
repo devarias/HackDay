@@ -1,19 +1,18 @@
 .instructions {
-    font-family: star-jedi;
-
+  font-family: star-jedi;
 }
 .instructions li {
-    font-size: 12px;
-    text-align: justify;
-    margin-bottom: 5px;
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 5px;
 }
 ol {
-    padding-right: 40px;
+  padding-right: 40px;
 }
 .title {
-    font-size: 30px;
-    background-color: blue;
-    border-radius: 10px;
-    background: rgba(0, 174, 69, 0.31);
-    margin-bottom: 20px;
+  font-size: 30px;
+  background-color: blue;
+  border-radius: 10px;
+  background: rgba(0, 174, 69, 0.31);
+  margin-bottom: 20px;
 }

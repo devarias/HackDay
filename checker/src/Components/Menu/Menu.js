@@ -12,10 +12,12 @@ function Menu(props) {
     onClick();
     axios
       .post(
-        Info.HolbieUrl +
+        Info.proxy +
+          Info.HolbieUrl +
           "/tasks/" +
           Info.project +
-          `/start_correction.json?auth_token=`,
+          `/start_correction.json?auth_token=` +
+          Info.auth_token,
         {
           ContentType: "application/json",
         }
@@ -28,7 +30,7 @@ function Menu(props) {
   };
 
   const listMenu = JSON.parse(Info.tasks).map((item) => (
-    <li className="projects" onClick={getTasks}>
+    <li key={item.id} className="projects" onClick={getTasks}>
       {item.title}
     </li>
   ));
@@ -38,7 +40,7 @@ function Menu(props) {
 
   return (
     <div className="container-menu">
-      <span>Project tasks</span>
+      <span>Project: {Info.projectName}</span>
       <button className="show" onClick={onClick}>
         {stateMenu}
       </button>
