@@ -6,7 +6,7 @@
 .container-menu span {
   font-weight: 700;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 15px;
   margin: 0 10px;
 }
 
@@ -45,4 +45,13 @@
 }
 .show {
   height: 50%;
+}
+.results {
+  background-color: black;
+  margin-top: 10%;
+  height: 250px;
+}
+.checkerima {
+  height: 10%;
+  width: 10%;
 }

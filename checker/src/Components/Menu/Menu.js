@@ -24,7 +24,21 @@ function Menu(props) {
       )
       .then((response) => {
         if (response.status === 200) {
-          console.log(response.data);
+          console.log(response);
+          axios
+            .get(
+              Info.proxy +
+                Info.HolbieUrl +
+                "/correction_requests/" +
+                response.data.id +
+                ".json?auth_token=" +
+                Info.auth_token,
+              { ContentType: "application/json" }
+            )
+            .then((res) => {
+              console.log(res.data);
+              console.log(Info.auth_token);
+            });
         }
       });
   };
@@ -39,15 +53,22 @@ function Menu(props) {
   // ));
 
   return (
-    <div className="container-menu">
-      <span>Project: {Info.projectName}</span>
-      <button className="show" onClick={onClick}>
-        {stateMenu}
-      </button>
-      <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
-        <ul>{listMenu}</ul>
-      </nav>
-      {/* <ul>{checks ? checks : null}</ul> */}
+    <div>
+      <div className="container-menu">
+        <span>Project: {Info.projectName}</span>
+        <button className="show" onClick={onClick}>
+          {stateMenu}
+        </button>
+        <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
+          <ul>{listMenu}</ul>
+        </nav>
+      </div>
+      <div className="results">
+        <img
+          className="checkerima"
+          src="https://as01.epimg.net/betech/imagenes/2017/10/10/portada/1507631983_511333_1507632220_noticia_normal.jpg"
+        />
+      </div>
     </div>
   );
 }
