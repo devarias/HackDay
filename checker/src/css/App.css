@@ -54,11 +54,13 @@ input[type="text" i] {
   padding: 2px 2px;
   background: rgba(0, 174, 69, 0.31);
   margin-top: -5px;
+  font-family:"arial-black";
 }
 input[type="password" i] {
   -webkit-text-security: disc !important;
   padding: 4px 2px;
   background: rgba(0, 174, 69, 0.31);
+  font-family:"arial-black";
   margin-top: -5px;
   height: 20px;
   width: 340px;
@@ -74,8 +76,13 @@ input[type="password" i] {
 }
 .footerIcon {
   width: 100px;
-  margin-top: -15px;
+  margin-top: 1px;
   }
+
+  .galaxy {
+    width: 100px;
+    margin-top: -20px;
+    }
 
 button {
   background: black;
@@ -88,30 +95,44 @@ button {
   margin: 20px;
 }
 
-div.footer{
-  font-family: "star-jedi";
-  font-size: 10px;
+
+.App-footer {
+  background-color: transparent;
   align-items: center;
-  background-color:white;
-  
-  margin: 0 auto 0 auto;
-  margin-top: 20px;
+  justify-content: center;
+  font-family:"star-jedi";
+  color: white;
+  font-size: 8px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px
+}
 
- }
+div.footer-container{
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family:"star-jedi";
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px
+  }
+
+p.footer {
+  font-size: 8px;
+
+}
 
 
- p.footer{
-   text-align: center;
-   align-items: center;
-   font-size: 15px;
-   color: black;
-   
-   
-   
- }
+
 @font-face {
   font-family: "star-jedi";
   src: url("../Fonts/Starjedi.ttf");
 }
 
-
+@font-face {
+  font-family: "arial-black";
+  src: url("../Fonts/ariblk.ttf");
+}

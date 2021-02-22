@@ -4,11 +4,13 @@ const footerIcon = "https://i.imgur.com/TUdHBzr.png";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer">
-        <p className="footer">
-          Made by valentina Jaramillo, Ricardo Arquimedes and David Arias -
-          Colombia 2021 <br></br> May the 4th be with you
-        </p>
+      <div className="footer-container">
+        <div>
+          Made by valentina Jaramillo, Ricardo Arquimedes and David Arias - Colombia <br></br>
+          May the Force be with you
+          
+      </div>
+      
         <img className="footerIcon" src={footerIcon} alt="" />
       </div>
     );

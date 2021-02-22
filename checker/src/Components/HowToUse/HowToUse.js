@@ -9,6 +9,7 @@ function HowToUse(props) {
   return (
     <div class="instructions">
       <div className="title">How to use</div>
+      
       <ol>
         <li>
           Fill the Login section with your holberton school email, password, api
