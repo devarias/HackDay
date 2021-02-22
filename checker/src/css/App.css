@@ -64,6 +64,10 @@ input[type="password" i] {
   margin-top: -30px;
   width: 300px;
 }
+.footerIcon {
+  width: 100px;
+  margin-top: -15px;
+  }
 
 button {
   background: black;
@@ -76,7 +80,28 @@ button {
   margin: 20px;
 }
 
+div.footer{
+  font-family: "star-jedi";
+  font-size: 10px;
+  align-items: center;
+  background-color:white;
+  
+  margin: 0 auto 0 auto;
+  margin-top: 20px;
+
+ }
+
+
+ p.footer{
+   text-align: center;
+   align-items: center;
+   font-size: 15px;
+   color: black;
+   
+ }
 @font-face {
   font-family: "star-jedi";
   src: url("../Fonts/Starjedi.ttf");
 }
+
+
