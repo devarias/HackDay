@@ -18,7 +18,10 @@ class App extends React.Component {
           <div className="container">
             <Routes />
           </div>
-          <Footer />
+          <footer className="App-footer">
+            <Footer />
+          </footer>
+          
         </div>
       </Router>
     );
