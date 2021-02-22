@@ -39,7 +39,9 @@ function Menu(props) {
   return (
     <div className="container-menu">
       <span>Project tasks</span>
-      <button onClick={onClick}>{stateMenu}</button>
+      <button className="show" onClick={onClick}>
+        {stateMenu}
+      </button>
       <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
         <ul>{listMenu}</ul>
       </nav>
