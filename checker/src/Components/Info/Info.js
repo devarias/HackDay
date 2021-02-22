@@ -12,6 +12,7 @@ class Info {
       auth_token: "",
       project: "",
       tasks: "",
+      checks: "",
     });
   }
 }

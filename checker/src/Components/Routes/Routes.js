@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Selection from "../Selection/Selection";
 import Login from "../Login/Login";
+import Menu from "../Menu/Menu";
 // import Checker from "../Checker/Checker";
 
 class Routes extends Component {
@@ -10,7 +11,7 @@ class Routes extends Component {
     return (
       <Switch>
         <Route path="/selection" exact component={Selection} />
-        {/* <Route path="/checker" exact component={Checker} /> */}
+        <Route path="/checker" exact component={Menu} />
         <Route path="/" exact component={Login} />
       </Switch>
     );
