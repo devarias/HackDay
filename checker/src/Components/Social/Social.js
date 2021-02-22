@@ -39,7 +39,7 @@ class Social extends Component {
           <img id="profilePic" src={Info.profilePicture} />
         </div>
         <div>
-          <p>galatic checker</p>
+          <p>galactic checker</p>
         </div>
       </div>
     );

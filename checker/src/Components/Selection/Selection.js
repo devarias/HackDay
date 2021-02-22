@@ -3,6 +3,8 @@ import Info from "../Info/Info";
 import axios from "axios";
 
 function Selection(props) {
+  const bbEight =
+    "https://i.pinimg.com/originals/6c/7d/a9/6c7da91893f7e628807a802ff423cf28.gif";
   const handleGetProject = (event) => {
     Info.project = event.target.value;
   };
@@ -24,6 +26,7 @@ function Selection(props) {
   };
   return (
     <div>
+      <img className="bbEight" src={bbEight} alt="" />
       <input
         className="box"
         type="text"
