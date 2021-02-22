@@ -1,21 +1,19 @@
 import React, { Component } from "react";
-import { observer } from "mobx-react";
 // npm i -S react-router-dom
-import { Router, Switch, Route } from "react-router-dom";
-import history from "../History/History";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Selection from "../Selection/Selection";
 import Login from "../Login/Login";
+// import Checker from "../Checker/Checker";
 
 class Routes extends Component {
   render() {
     return (
-      <Router history={history}>
-        <Switch>
-          <Route path="/" exact component={Login} />
-          <Route path="/selection" exact component={Selection} />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path="/selection" exact component={Selection} />
+        {/* <Route path="/checker" exact component={Checker} /> */}
+        <Route path="/" exact component={Login} />
+      </Switch>
     );
   }
 }
-export default observer(Routes);
+export default Routes;

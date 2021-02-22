@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import history from "../History/History";
 import Info from "../Info/Info";
 import axios from "axios";
 
-function Login() {
+function Login(props) {
   const HolbertonUrl = "https://intranet.hbtn.io";
   const babyYoda = "https://i.imgur.com/UnfCdzJ.png";
   const [email, setEmail] = useState("");
@@ -11,16 +10,16 @@ function Login() {
   const [apiKey, setAPIKey] = useState("");
 
   const handleGetEmail = (event) => {
-    // setEmail(event.target.value);
-    setEmail("1808@holbertonschool.com");
+    setEmail(event.target.value);
+    // setEmail("1808@holbertonschool.com");
   };
   const handleGetPassword = (event) => {
-    // setPassword(event.target.value);
-    setPassword("HolbertonC12");
+    setPassword(event.target.value);
+    // setPassword("HolbertonC12");
   };
   const handleGetApiKey = (event) => {
-    // setAPIKey(event.target.value);
-    setAPIKey("edffd887749a5acff54a1843d2caea1e");
+    setAPIKey(event.target.value);
+    // setAPIKey("edffd887749a5acff54a1843d2caea1e");
   };
   const data = {
     api_key: apiKey,
@@ -49,7 +48,7 @@ function Login() {
                 Info.githubUser = res.data.github_username;
                 Info.twitterUser = res.data.twitter_username;
                 Info.profilePicture = res.data.profile_pic;
-                history.push("/selection");
+                props.history.push("/selection");
               }
             });
         }

@@ -10,6 +10,8 @@ class Info {
       twitterUser: "",
       profilePicture: "https://i.imgur.com/j2maKR4.png",
       auth_token: "",
+      project: "",
+      tasks: "",
     });
   }
 }
