@@ -11,7 +11,8 @@ function Selection(props) {
   const buttonName = () => {
     axios
       .get(
-        `https://intranet.hbtn.io/projects/${Info.project}.json?auth_token=` +
+        Info.HolbieUrl +
+          `/projects/${Info.project}.json?auth_token=` +
           Info.auth_token,
         {
           ContentType: "application/json",

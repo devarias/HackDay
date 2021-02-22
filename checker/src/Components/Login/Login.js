@@ -3,7 +3,6 @@ import Info from "../Info/Info";
 import axios from "axios";
 
 function Login(props) {
-  const HolbertonUrl = "https://intranet.hbtn.io";
   const babyYoda = "https://i.imgur.com/UnfCdzJ.png";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +29,7 @@ function Login(props) {
 
   const buttonName = () => {
     axios
-      .post(HolbertonUrl + "/users/auth_token.json", data, {
+      .post(Info.HolbieUrl + "/users/auth_token.json", data, {
         ContentType: "application/json",
       })
       .then((response) => {
@@ -39,7 +38,7 @@ function Login(props) {
           Info.auth_token = response.data.auth_token;
           axios
             .get(
-              HolbertonUrl + "/users/me.json?auth_token=" + Info.auth_token,
+              Info.HolbieUrl + "/users/me.json?auth_token=" + Info.auth_token,
               { ContentType: "application/json" }
             )
             .then((res) => {

@@ -9,6 +9,7 @@ class Info {
       githubUser: "",
       twitterUser: "",
       profilePicture: "https://i.imgur.com/j2maKR4.png",
+      HolbieUrl: "https://intranet.hbtn.io",
       auth_token: "",
       project: "",
       tasks: "",
