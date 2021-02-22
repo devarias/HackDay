@@ -1,8 +1,9 @@
 .instructions {
     font-family: star-jedi;
+
 }
 .instructions li {
-    font-size: 14px;
+    font-size: 12px;
     text-align: justify;
     margin-bottom: 5px;
 }
