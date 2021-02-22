@@ -20,7 +20,7 @@ function Selection(props) {
       .then((response) => {
         if (response.status === 200) {
           Info.tasks = JSON.stringify(response.data.tasks);
-          props.history.push("/");
+          props.history.push("/checker");
         }
       });
   };
