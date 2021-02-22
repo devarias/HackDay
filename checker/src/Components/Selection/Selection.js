@@ -1,32 +1,24 @@
 import React, { useState } from "react";
-import { observer } from "mobx-react";
 import Info from "../Info/Info";
 import axios from "axios";
 
-function Selection() {
-  const [projectNumber, setProjectNumber] = useState(0);
-  const [tasks, setTasks] = useState(0);
-
+function Selection(props) {
   const handleGetProject = (event) => {
-    setProjectNumber(event.target.val);
-  };
-  const data = {
-    tasks: tasks,
+    Info.project = event.target.value;
   };
   const buttonName = () => {
     axios
       .get(
-        `https://intranet.hbtn.io/projects/${projectNumber}.json?auth_token=` +
+        `https://intranet.hbtn.io/projects/${Info.project}.json?auth_token=` +
           Info.auth_token,
-        data,
         {
-          Accept: "application/json",
           ContentType: "application/json",
         }
       )
       .then((response) => {
         if (response.status === 200) {
-          console.log(response.data);
+          Info.tasks = JSON.stringify(response.data.tasks);
+          props.history.push("/");
         }
       });
   };
