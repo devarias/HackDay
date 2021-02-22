@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { observer } from "mobx-react";
 import Routes from "./Components/Routes/Routes";
 import Social from "./Components/Social/Social";
+import Footer from "./Components/Footer/Footer";
 import history from "./Components/History/History";
 import "./css/App.css";
 
@@ -17,6 +18,7 @@ class App extends React.Component {
           <div className="container">
             <Routes />
           </div>
+          <Footer />
         </div>
       </Router>
     );
