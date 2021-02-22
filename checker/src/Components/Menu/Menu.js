@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import Info from "../Info/Info";
 import "../../css/Menu.css";
 import axios from "axios";
+import Checkers from '../Checkers/Checkers'
 
 function Menu(props) {
+
   const [displayMenu, setDisplayMenu] = useState(false);
   const onClick = () => setDisplayMenu(!displayMenu);
   let stateMenu = `${displayMenu ? "Hide" : "Show"}`;
+  let taskId = "";
+  let checker = "";
+
 
   const getTasks = () => {
     onClick();
     axios
       .post(
-        Info.proxy +
+          Info.proxy +
           Info.HolbieUrl +
           "/tasks/" +
-          Info.project +
+          taskId +
           `/start_correction.json?auth_token=` +
           Info.auth_token,
         {
@@ -24,21 +29,28 @@ function Menu(props) {
       )
       .then((response) => {
         if (response.status === 200) {
-          console.log(response.data);
-        }
-      });
+          Info.correctionId = response.data.id;
+        }}
+      );
+
   };
 
+  const getId = (event) => {
+    taskId = event.target
+  }
+
   const listMenu = JSON.parse(Info.tasks).map((item) => (
-    <li key={item.id} className="projects" onClick={getTasks}>
+    <li key={item.id} className="projects" onClick={getId, getTasks}>
       {item.title}
     </li>
   ));
-  // const checks = JSON.parse(Info.checks).map((item) => (
-  //   <li className={item.passed ? "passed" : "failed"}>{item.title}</li>
-  // ));
 
+  if (Info.correctionId !== "") {
+    checker = <Checkers />
+  }
+  console.log(taskId);
   return (
+    <>
     <div className="container-menu">
       <span>Project: {Info.projectName}</span>
       <button className="show" onClick={onClick}>
@@ -47,8 +59,11 @@ function Menu(props) {
       <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
         <ul>{listMenu}</ul>
       </nav>
-      {/* <ul>{checks ? checks : null}</ul> */}
     </div>
+    <div>
+      <ul>{displayMenu && checker ? null : checker}</ul>
+    </div>
+    </>
   );
 }
 
