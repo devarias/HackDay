@@ -13,6 +13,13 @@
   color: white;
 }
 
+div.social-container{
+  background-color: transparent;
+  width: 460px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
 div.container {
   border-radius: 15px;
   background-color: #f4f9fb;
@@ -40,6 +47,7 @@ h3 {
   text-align: left;
   font-size: 24px;
   margin: 1px;
+  text-shadow: -1px 0 #24e013, 0 1px #24e013, 1px 0 #24e013, 0 -1px #24e013;
 }
 
 input[type="text" i] {
@@ -97,6 +105,8 @@ div.footer{
    align-items: center;
    font-size: 15px;
    color: black;
+   
+   
    
  }
 @font-face {
