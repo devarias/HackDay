@@ -15,13 +15,14 @@
 
 div.container {
   border-radius: 15px;
-  background-color: white;
+  background-color: #F4F9FB;
   padding: 30px;
   margin: 0 auto 0 auto;
   width: 400px;
   height: 380px;
   
 }
+
 
 input.box {
   margin-left: -5px;
@@ -62,6 +63,14 @@ input[type="password" i] {
   margin-top: -30px;
   width: 150px;
 }
+
+.bbEight {
+  margin-top: -30px;
+  width: 300px;
+}
+
+
+
 button {
   background: black;
   color: white;
