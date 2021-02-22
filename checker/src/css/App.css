@@ -19,16 +19,19 @@ div.container {
   padding: 30px;
   margin: 0 auto 0 auto;
   width: 400px;
-  height: 400px;
+  height: 380px;
+  
 }
 
 input.box {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: -5px;
+  margin-right: 10px;
   height: 20px;
+  width: 340px;
   border-radius: 5px;
   box-shadow: 1px 1px  rgba(0, 174, 69, 0.31);
   border-color: transparent;
+  font-family: "distant-galaxy";
 }
 
 h3 {
@@ -41,18 +44,22 @@ h3 {
 }
 
 input[type="text" i] {
-  padding: 4px 2px;
+  padding: 2px 2px;
   background: rgba(0, 174, 69, 0.31);
   margin-top: -5px;
+  
+  
 }
 input[type="password" i] {
   -webkit-text-security: disc !important;
   padding: 4px 2px;
   background: rgba(0, 174, 69, 0.31);
   margin-top: -5px;
+  height: 20px;
+  width: 340px;
 }
 .babyYoda {
-  margin-top: -15px;
+  margin-top: -30px;
   width: 150px;
 }
 button {
@@ -71,3 +78,7 @@ button {
   src: url('../Fonts/Starjedi.ttf');
 }
 
+@font-face {
+  font-family: "distant-galaxy";
+  src: url('../Fonts/SfDistantGalaxy-0l3d.ttf');
+}
