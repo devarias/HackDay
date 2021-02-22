@@ -1,0 +1,46 @@
+.container-menu {
+    position: relative;
+    color: black;
+    background-color:rgba(3, 141, 58, 0.726);
+    
+}
+.container-menu span {
+    font-weight: 700;
+    vertical-align: middle;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.menu {
+    background: rgba(0, 174, 69, 0.31);
+    position: absolute;
+    border-radius: 8px;
+    width: 400px;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    visibility: hidden;
+}
+
+.menu.active {
+    visibility: visible;
+    transform: translateY(0);
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li {
+    border-bottom: 1px solid #dddddd;
+}
+.menu li a {
+    text-decoration: none;
+    color: #333333;
+    padding: 8px 4px;
+    display: block;
+    color: white;
+}
+.projects {
+    font-size: 15px;
+    color:black;
+}
