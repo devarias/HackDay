@@ -127,15 +127,9 @@ p.footer {
 
 .projects {
   font-family: "arial-black";
-  
-  /* display: inline-block; */
   text-align: left;
-  
-  border-color: black;
+    border-color: black;
 }
-
-
-
 
 ul {
     -moz-column-count: 4;
@@ -162,5 +156,6 @@ li.projects {
   font-family: "arial-black";
   src: url("../Fonts/ariblk.ttf");
 }
+
 
 
