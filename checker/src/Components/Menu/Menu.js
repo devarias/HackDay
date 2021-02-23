@@ -37,8 +37,9 @@ function Menu(props) {
   // ));
 
   return (
-    <div className="container-menu">
-      <span>Project tasks</span>
+    <div className="Container">
+  <div className="container-menu">
+     <span>Project tasks</span>
       <button className="show" onClick={onClick}>
         {stateMenu}
       </button>
@@ -47,6 +48,10 @@ function Menu(props) {
       </nav>
       {/* <ul>{checks ? checks : null}</ul> */}
     </div>
+
+
+    </div>
+    
   );
 }
 

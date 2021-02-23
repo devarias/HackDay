@@ -125,6 +125,32 @@ p.footer {
 
 }
 
+.projects {
+  font-family: "arial-black";
+  
+  /* display: inline-block; */
+  text-align: left;
+  
+  border-color: black;
+}
+
+
+
+
+ul {
+    -moz-column-count: 4;
+    -moz-column-gap: 25px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 25px;
+    column-count: 4;
+    column-gap: 25px;
+    border-color:black;
+    
+}
+li.projects {
+  width: auto;
+  height: auto;
+}
 
 
 @font-face {
@@ -136,3 +162,5 @@ p.footer {
   font-family: "arial-black";
   src: url("../Fonts/ariblk.ttf");
 }
+
+
