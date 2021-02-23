@@ -14,7 +14,7 @@ function Checkers(props) {
       if (response.status === 200) {
         Info.checks = JSON.stringify(response.data.result_display.checks);
       }
-    });
+    }).catch(error => console.error(error));
 
   const checks = JSON.parse(Info.checks).map((item) => (
     <div className={item.passed ? "passed" : "failed"}>{item.title}</div>

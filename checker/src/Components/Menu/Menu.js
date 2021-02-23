@@ -13,8 +13,10 @@ function Menu(props) {
   let checker = "";
 
 
-  const getTasks = () => {
+  const getTasks = (event) => {
     onClick();
+    taskId = event.target.getAttribute("id");
+    console.log(taskId)
     axios
       .post(
           Info.proxy +
@@ -30,17 +32,16 @@ function Menu(props) {
       .then((response) => {
         if (response.status === 200) {
           Info.correctionId = response.data.id;
-        }}
-      );
+        }
+      }
+      ).catch(error => console.error(error));
 
   };
 
-  const getId = (event) => {
-    taskId = event.target
-  }
+
 
   const listMenu = JSON.parse(Info.tasks).map((item) => (
-    <li key={item.id} className="projects" onClick={getId, getTasks}>
+    <li key={item.id} id={item.id} className="projects" onClick={getTasks}>
       {item.title}
     </li>
   ));
@@ -48,7 +49,8 @@ function Menu(props) {
   if (Info.correctionId !== "") {
     checker = <Checkers />
   }
-  console.log(taskId);
+  console.log(Info.correctionId)
+  
   return (
     <>
     <div className="container-menu">
