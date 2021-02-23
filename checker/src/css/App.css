@@ -56,6 +56,7 @@ input[type="text" i] {
   margin-top: -5px;
   font-family: "arial-black";
 }
+
 input[type="password" i] {
   -webkit-text-security: disc !important;
   padding: 4px 2px;
@@ -65,6 +66,7 @@ input[type="password" i] {
   height: 20px;
   width: 340px;
 }
+
 .babyYoda {
   margin-top: -30px;
   width: 150px;
@@ -121,6 +123,27 @@ div.footer-container {
 
 p.footer {
   font-size: 8px;
+}
+
+.projects {
+  font-family: "arial-black";
+  text-align: left;
+  border-color: black;
+}
+
+ul {
+  -moz-column-count: 4;
+  -moz-column-gap: 25px;
+  -webkit-column-count: 4;
+  -webkit-column-gap: 25px;
+  column-count: 4;
+  column-gap: 25px;
+  border-color: black;
+}
+
+li.projects {
+  width: auto;
+  height: auto;
 }
 
 @font-face {

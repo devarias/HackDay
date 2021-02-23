@@ -53,21 +53,16 @@ function Menu(props) {
   // ));
 
   return (
-    <div>
+    <div className="Container">
       <div className="container-menu">
-        <span>Project: {Info.projectName}</span>
+        <span>Project tasks</span>
         <button className="show" onClick={onClick}>
           {stateMenu}
         </button>
         <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
           <ul>{listMenu}</ul>
         </nav>
-      </div>
-      <div className="results">
-        <img
-          className="checkerima"
-          src="https://as01.epimg.net/betech/imagenes/2017/10/10/portada/1507631983_511333_1507632220_noticia_normal.jpg"
-        />
+        {/* <ul>{checks ? checks : null}</ul> */}
       </div>
     </div>
   );
