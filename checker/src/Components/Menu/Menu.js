@@ -2,20 +2,25 @@ import React, { useState } from "react";
 import Info from "../Info/Info";
 import "../../css/Menu.css";
 import axios from "axios";
+import Checkers from "../Checkers/Checkers";
 
 function Menu(props) {
   const [displayMenu, setDisplayMenu] = useState(false);
   const onClick = () => setDisplayMenu(!displayMenu);
   let stateMenu = `${displayMenu ? "Hide" : "Show"}`;
+  let taskId = "";
+  let checker = "";
 
-  const getTasks = () => {
+  const getTasks = (event) => {
     onClick();
+    taskId = event.target.getAttribute("id");
+    console.log(taskId);
     axios
       .post(
         Info.proxy +
           Info.HolbieUrl +
           "/tasks/" +
-          Info.project +
+          taskId +
           `/start_correction.json?auth_token=` +
           Info.auth_token,
         {
@@ -24,47 +29,38 @@ function Menu(props) {
       )
       .then((response) => {
         if (response.status === 200) {
-          console.log(response);
-          axios
-            .get(
-              Info.proxy +
-                Info.HolbieUrl +
-                "/correction_requests/" +
-                response.data.id +
-                ".json?auth_token=" +
-                Info.auth_token,
-              { ContentType: "application/json" }
-            )
-            .then((res) => {
-              console.log(res.data);
-              console.log(Info.auth_token);
-            });
+          Info.correctionId = response.data.id;
         }
-      });
+      })
+      .catch((error) => console.error(error));
   };
 
   const listMenu = JSON.parse(Info.tasks).map((item) => (
-    <li key={item.id} className="projects" onClick={getTasks}>
+    <li key={item.id} id={item.id} className="projects" onClick={getTasks}>
       {item.title}
     </li>
   ));
-  // const checks = JSON.parse(Info.checks).map((item) => (
-  //   <li className={item.passed ? "passed" : "failed"}>{item.title}</li>
-  // ));
+
+  if (Info.correctionId !== "") {
+    checker = <Checkers />;
+  }
+  console.log(Info.correctionId);
 
   return (
-    <div className="Container">
+    <>
       <div className="container-menu">
-        <span>Project tasks</span>
+        <span>Project: {Info.projectName}</span>
         <button className="show" onClick={onClick}>
           {stateMenu}
         </button>
         <nav className={`menu ${displayMenu ? "active" : "inactive"}`}>
           <ul>{listMenu}</ul>
         </nav>
-        {/* <ul>{checks ? checks : null}</ul> */}
       </div>
-    </div>
+      <div>
+        <ul>{displayMenu && checker ? null : checker}</ul>
+      </div>
+    </>
   );
 }
 

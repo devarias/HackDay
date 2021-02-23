@@ -14,6 +14,7 @@ class Info {
       projectName: "",
       project: "",
       tasks: "",
+      correctionId: "",
       checks: "",
       proxy: "https://thingproxy.freeboard.io/fetch/",
     });
